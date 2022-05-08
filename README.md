@@ -7,38 +7,20 @@ Anaconda - Python 3.7
 
 ## Algorithm:
 
-### Step 1:
-Import the necessary modules.
+### Step1:
+Import cv2, matplotlib.py libraries and read the saved images using cv2.imread().
 
-### Step 2:
-For performing smoothing operation on a image.
+### Step2:
+Convert the saved BGR image to RGB using cvtColor().
 
-Average filter
-kernel=np.ones((11,11),np.float32)/121
-image3=cv2.filter2D(image2,-1,kernel)
+### Step3:
+By using the following filters for image smoothing:filter2D(src, ddepth, kernel), Box filter,Weighted Average filter,GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]]), medianBlur(src, ksize),and for image sharpening:Laplacian Kernel,Laplacian Operator.
 
-Weighted average filter
-kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
-image3=cv2.filter2D(image2,-1,kernel1)
+### Step4:
+Apply the filters using cv2.filter2D() for each respective filters.
 
-Gaussian Blur
-gaussian_blur=cv2.GaussianBlur(image2,(33,33),0,0)
-
-Median filter
-median=cv2.medianBlur(image2,13)
-
-### Step 3:
-For performing sharpening on a image.
-
-Laplacian Kernel
-kernel2=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
-image3=cv2.filter2D(image2,-1,kernel2)
-
-Laplacian Operator
-laplacian=cv2.Laplacian(image2,cv2.CV_64F)
-
-### Step 4:
-Display all the images with their respective filters.
+### Step5:
+Plot the images of the original one and the filtered one using plt.figure() and cv2.imshow().
 
 ## Program:
 ### Developed By   :Bharath.V
