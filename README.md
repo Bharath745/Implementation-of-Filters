@@ -27,11 +27,13 @@ Plot the images of the original one and the filtered one using plt.figure() and 
 ### Register Number:212221230013
 </br>
 
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 image = cv2.imread("abcd.jpg")
 original_image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+```
 
 ### 1. Smoothing Filters
 
